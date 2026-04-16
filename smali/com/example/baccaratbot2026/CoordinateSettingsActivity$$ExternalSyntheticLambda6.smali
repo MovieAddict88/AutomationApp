@@ -1,0 +1,60 @@
+.class public final synthetic Lcom/example/baccaratbot2026/CoordinateSettingsActivity$$ExternalSyntheticLambda6;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+
+
+# instance fields
+.field public final synthetic f$0:Landroid/widget/TextView;
+
+.field public final synthetic f$1:Lcom/example/baccaratbot2026/CoordinateSettingsActivity;
+
+.field public final synthetic f$2:Landroid/widget/FrameLayout;
+
+.field public final synthetic f$3:Ljava/lang/String;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroid/widget/TextView;Lcom/example/baccaratbot2026/CoordinateSettingsActivity;Landroid/widget/FrameLayout;Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/example/baccaratbot2026/CoordinateSettingsActivity$$ExternalSyntheticLambda6;->f$0:Landroid/widget/TextView;
+
+    iput-object p2, p0, Lcom/example/baccaratbot2026/CoordinateSettingsActivity$$ExternalSyntheticLambda6;->f$1:Lcom/example/baccaratbot2026/CoordinateSettingsActivity;
+
+    iput-object p3, p0, Lcom/example/baccaratbot2026/CoordinateSettingsActivity$$ExternalSyntheticLambda6;->f$2:Landroid/widget/FrameLayout;
+
+    iput-object p4, p0, Lcom/example/baccaratbot2026/CoordinateSettingsActivity$$ExternalSyntheticLambda6;->f$3:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 6
+
+    .line 0
+    iget-object v0, p0, Lcom/example/baccaratbot2026/CoordinateSettingsActivity$$ExternalSyntheticLambda6;->f$0:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/example/baccaratbot2026/CoordinateSettingsActivity$$ExternalSyntheticLambda6;->f$1:Lcom/example/baccaratbot2026/CoordinateSettingsActivity;
+
+    iget-object v2, p0, Lcom/example/baccaratbot2026/CoordinateSettingsActivity$$ExternalSyntheticLambda6;->f$2:Landroid/widget/FrameLayout;
+
+    iget-object v3, p0, Lcom/example/baccaratbot2026/CoordinateSettingsActivity$$ExternalSyntheticLambda6;->f$3:Ljava/lang/String;
+
+    move-object v4, p1
+
+    move-object v5, p2
+
+    invoke-static/range {v0 .. v5}, Lcom/example/baccaratbot2026/CoordinateSettingsActivity;->$r8$lambda$lypYWRjNaDHLqzyzXztttqunEr8(Landroid/widget/TextView;Lcom/example/baccaratbot2026/CoordinateSettingsActivity;Landroid/widget/FrameLayout;Ljava/lang/String;Landroid/view/View;Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
+.end method

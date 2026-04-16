@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.example.baccaratbot2026.CustomWebView android:id="@id/customWebView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/ocrOverlayGameResult" android:background="@drawable/red_border_overlay" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <View android:id="@id/ocrOverlayTotalBet" android:background="@drawable/red_border_overlay" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <View android:id="@id/ocrOverlayStatusMessage" android:background="@drawable/red_border_overlay" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <View android:id="@id/overlayBox" android:background="@color/black" android:visibility="gone" android:layout_width="168.0dip" android:layout_height="176.0dip" />
+    </FrameLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@id/floatingButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@android:drawable/ic_menu_add" android:contentDescription="Toggle Floating UI" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:tint="@android:color/white" />
+    <LinearLayout android:orientation="vertical" android:id="@id/floatingOverlay" android:background="#ffd3d3d3" android:padding="16.0dip" android:visibility="visible" android:layout_width="300.0dip" android:layout_height="wrap_content" android:elevation="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Baccarat Bot" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+            <Button android:textColor="@android:color/black" android:id="@id/startButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start" />
+            <Button android:textColor="@android:color/black" android:id="@id/pauseButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pause" />
+            <Button android:textColor="@android:color/black" android:id="@id/stopButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stop" />
+        </LinearLayout>
+        <Button android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/settingsButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="⚙️ Settings" android:backgroundTint="#ffff9800" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔍 Zoom Level (%):" android:layout_marginEnd="8.0dip" />
+            <EditText android:textSize="14.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/zoomLevelInput" android:layout_width="60.0dip" android:layout_height="wrap_content" android:hint="80" android:inputType="number" />
+            <Button android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@id/applyZoomButton" android:layout_width="wrap_content" android:layout_height="36.0dip" android:text="Apply" android:layout_marginStart="8.0dip" android:backgroundTint="#ff4caf50" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="💰 Take Profit Settings" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Starting Balance:" android:layout_marginEnd="8.0dip" />
+            <EditText android:textSize="14.0sp" android:textColor="@android:color/black" android:id="@id/startingBalanceInput" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="1000" android:layout_weight="1.0" android:inputType="numberDecimal" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Target Profit (%):" android:layout_marginEnd="8.0dip" />
+            <EditText android:textSize="14.0sp" android:textColor="@android:color/black" android:id="@id/targetProfitInput" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="30" android:layout_weight="1.0" android:inputType="numberDecimal" />
+        </LinearLayout>
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffff9800" android:id="@id/currentProfitTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="Profit: $0.00 (0%) W:0 L:0" />
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="Amounts" />
+        <RadioGroup android:orientation="horizontal" android:id="@id/amountsRadioGroup" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RadioButton android:textColor="@android:color/black" android:id="@id/amount4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/amount8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/amount16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="16" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/amount20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20" />
+        </RadioGroup>
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="Patterns" />
+        <RadioGroup android:orientation="horizontal" android:id="@id/patternsRadioGroupRow1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:textColor="@android:color/black" android:id="@id/patternA" android:layout_width="0.0dip" android:layout_height="wrap_content" android:checked="true" android:text="A" android:layout_weight="1.0" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/patternB" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="B" android:layout_weight="1.0" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/patternC" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="C" android:layout_weight="1.0" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/patternD" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="D" android:layout_weight="1.0" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/patternE" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="E" android:layout_weight="1.0" />
+        </RadioGroup>
+        <RadioGroup android:orientation="horizontal" android:id="@id/patternsRadioGroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:textColor="@android:color/black" android:id="@id/patternF" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="F" android:layout_weight="1.0" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/patternG" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="G" android:layout_weight="1.0" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/patternH" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="H" android:layout_weight="1.0" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/patternI" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="I" android:layout_weight="1.0" />
+            <RadioButton android:textColor="@android:color/black" android:id="@id/patternJ" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="J" android:layout_weight="1.0" />
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/historyPanel" android:background="#cc000000" android:padding="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="4.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📜 History" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/historyTable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/liveOcrPanel" android:background="#cc000000" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textSize="9.0sp" android:textColor="#ffffffff" android:id="@id/currentBetAmountTextView" android:background="#cc333333" android:padding="4.0dip" android:layout_width="140.0dip" android:layout_height="wrap_content" android:text="Status: Ready" android:maxLines="4" />
+        <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ff4caf50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="📊 Result:" />
+        <TextView android:textSize="9.0sp" android:textColor="#ffffffff" android:id="@id/liveOcrGameResult" android:background="#ff1b5e20" android:padding="4.0dip" android:layout_width="140.0dip" android:layout_height="wrap_content" android:text="--" android:maxLines="2" />
+        <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ffff9800" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="⏱️ Countdown:" />
+        <TextView android:textSize="9.0sp" android:textColor="#ffffffff" android:id="@id/liveOcrCountdown" android:background="#ffe65100" android:padding="4.0dip" android:layout_width="140.0dip" android:layout_height="wrap_content" android:text="--" android:maxLines="2" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

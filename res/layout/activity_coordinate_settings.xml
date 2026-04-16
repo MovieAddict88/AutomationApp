@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="#ff2c2c2c" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="⚙️ Coordinate Settings" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffcccccc" android:gravity="center" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Calibrate OCR areas and betting positions" />
+        <Button android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/usePercentageBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="🎯 Auto-Scale for This Device" android:backgroundTint="#ffff9800" />
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffff9800" android:paddingTop="8.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="⚙️ Martingale Settings" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
+            <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Max Consecutive Losses:" android:layout_weight="1.0" />
+            <EditText android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:textColorHint="#ff888888" android:gravity="center" android:id="@id/maxConsecutiveLossesInput" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="80.0dip" android:layout_height="45.0dip" android:hint="11" android:inputType="number" />
+            <TextView android:textSize="11.0sp" android:textColor="#ffcccccc" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(Max: 11)" />
+        </LinearLayout>
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff00ff00" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="📊 Game Result Area (PLAYER/BANKER/TIE/YOU WIN)" />
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/gameResultX" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/gameResultY" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="W:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/gameResultWidth" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="H:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/gameResultHeight" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:textColor="#ffffffff" android:id="@id/captureGameResultBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="📷 Capture Game Result Area" android:backgroundTint="#ff22b14c" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffff9800" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="⏱️ Countdown Area (Numbers 1-10)" />
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/countdownX" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/countdownY" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="W:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/countdownWidth" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="H:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/countdownHeight" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:textColor="#ffffffff" android:id="@id/captureCountdownBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="📷 Capture Countdown Area" android:backgroundTint="#ffff6600" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff1e90ff" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="🎯 Player Bet Position" />
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/playerBetX" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/playerBetY" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:textColor="#ffffffff" android:id="@id/capturePlayerBetBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="📷 Capture Player Bet Position" android:backgroundTint="#ff1e90ff" />
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff1e90ff" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="🎯 Banker Bet Position" />
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="X:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/bankerBetX" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Y:" />
+                <EditText android:textColor="#ffffffff" android:id="@id/bankerBetY" android:background="#ff1e1e1e" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:inputType="number" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:textColor="#ffffffff" android:id="@id/captureBankerBetBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="📷 Capture Banker Bet Position" android:backgroundTint="#ff1e90ff" />
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffff9800" android:gravity="center" android:paddingTop="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="💰 Chip Panel &amp; Buttons (7 Chips)" />
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="💎 7 Chip Buttons ($4, $20, $100, $400, $2K, $5K, $20K)" />
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+            <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="$4:" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip4X" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="2.0dip" android:hint="X" android:layout_weight="1.0" android:inputType="number" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip4Y" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="4.0dip" android:hint="Y" android:layout_weight="1.0" android:inputType="number" />
+            <Button android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/captureChip4Btn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:minWidth="50.0dip" android:text="📷" android:backgroundTint="#ff22b14c" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+            <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="$20:" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip20X" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="2.0dip" android:hint="X" android:layout_weight="1.0" android:inputType="number" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip20Y" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="4.0dip" android:hint="Y" android:layout_weight="1.0" android:inputType="number" />
+            <Button android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/captureChip20Btn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:minWidth="50.0dip" android:text="📷" android:backgroundTint="#ff22b14c" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+            <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="$100:" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip100X" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="2.0dip" android:hint="X" android:layout_weight="1.0" android:inputType="number" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip100Y" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="4.0dip" android:hint="Y" android:layout_weight="1.0" android:inputType="number" />
+            <Button android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/captureChip100Btn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:minWidth="50.0dip" android:text="📷" android:backgroundTint="#ff22b14c" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+            <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="$400:" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip400X" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="2.0dip" android:hint="X" android:layout_weight="1.0" android:inputType="number" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip400Y" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="4.0dip" android:hint="Y" android:layout_weight="1.0" android:inputType="number" />
+            <Button android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/captureChip400Btn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:minWidth="50.0dip" android:text="📷" android:backgroundTint="#ff22b14c" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+            <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="$2000:" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip2000X" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="2.0dip" android:hint="X" android:layout_weight="1.0" android:inputType="number" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip2000Y" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="4.0dip" android:hint="Y" android:layout_weight="1.0" android:inputType="number" />
+            <Button android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/captureChip2000Btn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:minWidth="50.0dip" android:text="📷" android:backgroundTint="#ff22b14c" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+            <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="$5000:" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip5000X" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="2.0dip" android:hint="X" android:layout_weight="1.0" android:inputType="number" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip5000Y" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="4.0dip" android:hint="Y" android:layout_weight="1.0" android:inputType="number" />
+            <Button android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/captureChip5000Btn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:minWidth="50.0dip" android:text="📷" android:backgroundTint="#ff22b14c" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="#ff3d3d3d" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
+            <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="$20000:" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip20000X" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="2.0dip" android:hint="X" android:layout_weight="1.0" android:inputType="number" />
+            <EditText android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/chip20000Y" android:background="#ff1e1e1e" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="30.0dip" android:layout_marginRight="4.0dip" android:hint="Y" android:layout_weight="1.0" android:inputType="number" />
+            <Button android:textSize="10.0sp" android:textColor="#ffffffff" android:id="@id/captureChip20000Btn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:minWidth="50.0dip" android:text="📷" android:backgroundTint="#ff22b14c" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/saveCoordinatesBtn" android:layout_width="0.0dip" android:layout_height="60.0dip" android:layout_marginRight="8.0dip" android:text="💾 Save &amp; Apply" android:layout_weight="1.0" android:backgroundTint="#ff22b14c" />
+            <Button android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/cancelBtn" android:layout_width="0.0dip" android:layout_height="60.0dip" android:layout_marginLeft="8.0dip" android:text="❌ Cancel" android:layout_weight="1.0" android:backgroundTint="#ffed1c24" />
+        </LinearLayout>
+        <TextView android:textSize="10.0sp" android:textColor="#ffcccccc" android:gravity="center" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="💡 Tip: Use 'Auto-Scale' first, then fine-tune if needed" />
+    </LinearLayout>
+</ScrollView>
